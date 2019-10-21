@@ -50,26 +50,28 @@ a{
 .container{
     max-width: 1170px;
     margin: auto;
-    position: relative;
 }
 .container:after{
     display: block;
     content:"";
     clear: both;
 }
-.page{
-    max-width: 1220px;
-    margin: auto;
-}
 h1{
     position: absolute;
     font-family: 'Bebas Neue',sans-serif;
     font-size:50px;
     font-weight:400 ;
-    color: #fff;
+    color:#fff;
     text-transform: uppercase;
+
     top: 225px ;
+    max-width: 1170px;
     width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     text-align: center;
 }
 h1:after{
@@ -87,6 +89,7 @@ h1:after{
 }
 .intro img{
     display: block;
+    width: 100%;
 }
 /*==========================*/
 /*header*/
@@ -168,14 +171,28 @@ header{
     border-radius: 3px;
     transition: 0.3s;
 }
+.header__up .btn__group a:before{
+    display: inline-block;
+    margin-right: 10px;
+    font-family:'Font Awesome\ 5 Free';
+    font-weight: 900;
+}
+.header__up .btn__group a:nth-of-type(1):before{
+    content: '\f07a';
+}
+.header__up .btn__group a:nth-of-type(2):before{
+    content: '\f007';
+}
+.header__up .btn__group a:nth-of-type(3):before{
+    content: '\f234';
+}
 .header__up .btn__group a:hover{
     -webkit-box-shadow: 1px 1px 8px 9px rgba(7,16,74,1);
     -moz-box-shadow: 1px 1px 8px 9px rgba(7,16,74,1);
     box-shadow: 1px 1px 8px 9px rgba(7,16,74,1);
 }
-.header__up .btn__group a:first-of-type{
+.header__up .btn__group a:nth-of-type(1){
     background: #252525;
-    font-size: 15px;
 }
 .header__up .btn__group a:nth-of-type(2){
     background: #464646;
