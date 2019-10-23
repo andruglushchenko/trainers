@@ -34,7 +34,7 @@
 body{
     margin: 0;
     padding: 0;
-    background: #fff;
+    background:#fff;
 }
 *{
     margin: 0;
@@ -51,12 +51,21 @@ a{
     max-width: 1170px;
     margin: auto;
 }
+
 .container:after{
     display: block;
     content:"";
     clear: both;
 }
-h1{
+.container_border{
+    border-bottom: solid 2px #464646;
+    padding-bottom: 21px;
+}
+.container_for_workouts{
+    max-width: 1220px;
+}
+
+h1{ /*position: absolute intro*/
     position: absolute;
     font-family: 'Bebas Neue',sans-serif;
     font-size:50px;
@@ -64,27 +73,72 @@ h1{
     color:#fff;
     text-transform: uppercase;
 
-    top: 225px ;
-    max-width: 1170px;
+    top:245px;
     width: 100%;
-
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
     text-align: center;
 }
 h1:after{
     display: block;
     content: '';
+    max-width: 1170px;
+    margin:33px auto 0 ;
     height: 3px;
     background:#e50202;
-    margin-top: 32px;
+}
+h2{ /*position: absolute workouts*/
+    position: absolute;
+    font-family: 'Bebas Neue',sans-serif;
+    font-size:50px;
+    font-weight:400 ;
+    color:#fff;
+    text-transform: uppercase;
+
+    top:245px;
+    width: 100%;
+    text-align: center;
+}
+h2:after{
+    display: block;
+    content: '';
+    max-width: 1170px;
+    margin:33px auto 0 ;
+    height: 3px;
+    background:#e50202;
+}
+h3{
+    font-family: 'Bebas Neue',sans-serif;
+    font-size:50px;
+    font-weight:400 ;
+    color:#000;
+    text-transform: uppercase;
+    float: left;
+}
+h3:before{
+    content:url("../images/workouts_icon_9.png") ;
+    margin-right: 25px;
+}
+h4{
+    font-family: 'Bebas Neue',sans-serif;
+    font-size:25px;
+    font-weight:400 ;
+    color:#3c3c3c;
+    text-transform: uppercase;
+    float: left;
+    margin-top: -12px;
+}
+h4:before{
+    display: inline-block;
+    content:'\f005';
+    font-family: "Font Awesome\ 5 Brands", "Font Awesome\ 5 Free";
+    font-weight: 300;
+    color: #3c3c3c;
+    margin-right: 15px;
+    transition: 0.3s;
 }
 /*======================*/
 
 /*intro*/
-.intro{
+.intro{ /*position: relative*/
     position: relative;
 }
 .intro img{
@@ -92,40 +146,29 @@ h1:after{
     width: 100%;
 }
 /*==========================*/
+
+
 /*header*/
-header{
+header{ /*position: absolute intro*/
     position: absolute;
     width: 100%;
     top:0;
     left: 0;
     z-index: 1;
     background: rgba(0,0,0,0.5 );
+    padding: 25px 0 12px;
 }
-
-/********************/
-/*header up*/
-.header__up{
-    padding: 20px 0;
-    border-bottom: solid 2px #464646;
-}
-.header__up:after{
-    display: block;
-    content: "";
-    clear: both;
-}
-.header__up a{
+header .logo{
     display: inline-block;
     float: left;
 }
-.header__up .btn__group{
+/*form*/
+header form{
+    display: inline-block;
     float: right;
-    padding-top: 12px;
+    margin-top: 11px;
 }
-.header__up .btn__group form{
-    display: inline-block;
-    float: left;
-}
-.header__up .btn__group form input{
+header form input{
     display: inline-block;
     background: #fff;
     width: 170px;
@@ -134,129 +177,394 @@ header{
     border: 0;
     border-radius: 3px 0 0 3px;
 }
-.header__up .btn__group form input::-webkit-input-placeholder {
+header form input::-webkit-input-placeholder {
     font-family: 'Metropolis',sans-serif;
     color: #959595;
     font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
 }
-.header__up .btn__group form button{
+header form button{
     margin-left: -4px;
     background: #fff;
-    padding: 9px 15px 12px;
+    padding: 8px 15px 14px;
     border:0;
     cursor: pointer;
-
-    font-size: 15px;
-    color: red;
-    font-weight: 900;
-    transition: 0.3s;
     border-radius:0 3px 3px 0;
+
+    transition: 0.3s;
 }
-.header__up .btn__group form button:hover{
+header form button:before{
+    display: inline-block;
+    content: '\f002';
+    font-family: "Font Awesome\ 5 Brands", "Font Awesome\ 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+    color: red;
+}
+header form button:hover{
     background: #07104a;
 }
-.header__up .btn__group a{
-    margin-left: 25px;
+/*******************/
+header .link{
+    display: inline-block;
+    float: right;
     line-height: 43px;
     min-width: 170px;
     text-align: center;
+    margin-left: 23px;
+    margin-top: 11px;
+    border-radius: 3px;
 
     font-family: 'Metropolis',sans-serif;
     color: #fff;
     font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
-    border-radius: 3px;
+
     transition: 0.3s;
 }
-.header__up .btn__group a:before{
+.link_dark{
+    background: #252525;
+}
+.link_light{
+    background: #464646;
+}
+.link_red{
+    background:#fa090a;
+}
+header .link:before{
     display: inline-block;
     margin-right: 10px;
-    font-family:'Font Awesome\ 5 Free';
+    font-family: "Font Awesome\ 5 Brands","Font Awesome\ 5 Free";
     font-weight: 900;
 }
-.header__up .btn__group a:nth-of-type(1):before{
+.link_dark:before{
     content: '\f07a';
 }
-.header__up .btn__group a:nth-of-type(2):before{
+.link_light:before{
     content: '\f007';
 }
-.header__up .btn__group a:nth-of-type(3):before{
+.link_red:before{
     content: '\f234';
 }
-.header__up .btn__group a:hover{
+header .link:hover{
     -webkit-box-shadow: 1px 1px 8px 9px rgba(7,16,74,1);
     -moz-box-shadow: 1px 1px 8px 9px rgba(7,16,74,1);
     box-shadow: 1px 1px 8px 9px rgba(7,16,74,1);
 }
-.header__up .btn__group a:nth-of-type(1){
-    background: #252525;
-}
-.header__up .btn__group a:nth-of-type(2){
-    background: #464646;
-}
-.header__up .btn__group a:nth-of-type(3){
-    background: #fa090a;
-}
-.header__up .btn__group a i{
-    margin-right: 10px;
-}
-/*****************/
-/*header down*/
-.header__down{
-    padding: 21px 0 12px;
-}
-.header__down:after{
-    display: block;
-    content: "";
-    clear: both;
-}
-.header__down nav{
+/*********************/
+/*nav*/
+header nav{
     float: left;
+    margin-top: 20px;
 }
-.header__down nav ul li{
+header nav ul li{
     display: inline-block;
     margin-left: 18px;
     padding:0 5px 10px;
     border-bottom: solid 4px transparent;
     transition: 0.3s;
 }
-.header__down nav ul li:hover{
+header nav ul li:hover{
     border-bottom: solid 4px #fa090a;
 }
-.header__down nav ul li:first-of-type{
+header nav ul li:first-of-type{
     margin-left: 0;
 }
-.header__down nav ul li a{
+header nav ul li a{
     font-family: 'Bebas Neue',sans-serif;
     font-weight:400 ;
     font-size:25px ;
     color: #fff;
     text-transform: uppercase;
 }
- .social{
+/**********************/
+
+/*social*/
+.social{
     float: right;
-     cursor: pointer;
-}
-.social a{
+    margin-top: 17px;
+    margin-left: 15px;
     display: inline-block;
     line-height: 31px;
     width: 31px;
-    font-size: 25px;
     background:#fa090a;
     text-align: center;
+
+    font-family: "Font Awesome\ 5 Brands","Font Awesome\ 5 Free";
+    font-weight: 900;
+    font-size: 25px;
     color:#000;
-    margin-left: 15px;
+
+    cursor: pointer;
     transition: 0.3s;
 }
-.social a:hover{
+.social:hover{
     background: #FA8104;
+}
+.social_facebook:before{
+    content:'\f39e';
+}
+.social_instagram:before{
+    content:'\f16d';
+}
+.social_twitter:before{
+    content:'\f099';
+}
+.social_youtube:before{
+    content:'\f167';
 }
 /*=======================*/
 
+/*workouts*/
 
+.workouts{
+    background: gray;
+    position: relative; /*position: relative*/
+}
+.workouts img{
+    display: block;
+    width: 100%;
+}
+/*sidebar*/
+.sidebar{
+    width: 20%;
+    float: left;
+    background: #000;
+    padding-bottom: 1342px;
+}
+.sidebar nav ul{
+    padding: 25px 0  0 27px;
+    margin-bottom: 50px;
+}
+.sidebar nav ul li{
+    line-height: 35px;
+    margin-left: -27px;
+    padding-left: 27px;
+
+    transition: 0.3s;
+}
+.sidebar nav ul li:hover{
+    background: red;
+}
+.sidebar nav ul li a{ /*position: relative*/
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding-left: 35px;
+
+    font-family:'Metropolis', sans-serif;
+    font-weight:300 ;
+    font-size:13px ;
+    color: #fff;
+    text-transform: uppercase;
+}
+.sidebar nav ul li a:before{ /*position: absolute a*/
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top:4px;
+}
+.sidebar nav ul li .all:before{
+    content:url("../images/workouts_icon_1.png") ;
+}
+.sidebar nav ul li .Abs:before{
+    content:url("../images/workouts_icon_2.png") ;
+}
+.sidebar nav ul li .Arm:before{
+    content:url("../images/workouts_icon_3.png") ;
+}
+.sidebar nav ul li .Back:before{
+    content:url("../images/workouts_icon_4.png") ;
+}
+.sidebar nav ul li .Chest:before{
+    content:url("../images/workouts_icon_5.png") ;
+}
+.sidebar nav ul li .Leg:before{
+    content:url("../images/workouts_icon_6.png") ;
+}
+.sidebar nav ul li .Shoulder:before{
+    content:url("../images/workouts_icon_7.png") ;
+}
+.sidebar nav ul li .Videos:before{
+    content:url("../images/workouts_icon_8.png") ;
+}
+
+.sidebar form{
+    display:block;
+    text-align: center;
+}
+.sidebar form input{
+    display: inline-block;
+    background: #fff;
+    width: 140px;
+    margin-left: -4px;
+    line-height: 43px;
+    border: 0;
+    border-radius: 0 3px 3px 0;
+}
+.sidebar form input::-webkit-input-placeholder {
+    font-family: 'Metropolis',sans-serif;
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.sidebar form button{
+    background: #fff;
+    padding: 8px 15px 14px;
+    border:0;
+    cursor: pointer;
+    border-radius:3px 0 0 3px ;
+
+    transition: 0.3s;
+
+}
+.sidebar form button:before{
+    display: inline-block;
+    content: '\f002';
+    font-family: "Font Awesome\ 5 Brands", "Font Awesome\ 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+    color:#c3c3c3 ;
+}
+.sidebar form button:hover{
+    background: #07104a;
+}
+
+/*content*/
+.content{
+    float: right;
+    background:#f1f1f1;
+    width: 80%;
+    padding: 35px 42px;
+}
+.content form{
+    float: right;
+}
+.content form select{
+    display: inline-block;
+    float: right;
+    min-width: 170px;
+    margin-left: 18px;
+    margin-top: 10px;
+    padding: 16px ;
+    background: #a1a1a1;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+
+    font-family: 'Metropolis',sans-serif;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+ .content video{
+    width: 100%;
+    margin: 35px 0;
+    position: relative;
+}
+.content__item{
+    display: inline-block;
+    float: left;
+    width: 47%;
+    margin-bottom: 35px;
+}
+.content__item:nth-of-type(1){
+    float: left;
+}
+.content__item:nth-of-type(2){
+    float: right;
+}
+
+content__item:after{
+    display: inline-block;
+    content: '';
+    clear: both;
+}
+.content__item a{
+    display: inline-block;
+    background: red;
+    margin-bottom: 25px;
+}
+.content__item a img{
+    transition: 0.3s;
+}
+.content__item:hover a img{
+    opacity: 0.5;
+}
+.content__item:hover h4:before{
+    font-weight: 900;
+    color: #fa090a;
+}
+
+/* The switch - the box around the slider */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 10px;
+    float: right;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: -10px;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    top:-4px;
+    left: 0;
+    bottom: 4px;
+    background-color: #959595;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:after{
+    content: 'COMPLETE NOW';
+    position: absolute;
+    left:-140px;
+    font-family: 'Metropolis',sans-serif;
+    color: #555555;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+input:checked + .slider:before {
+    background-color: #fa090a;
+}
+
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
 
 /*============================*/
 
@@ -269,14 +577,15 @@ header{
     text-align: center;
 }
 .subscribe p{
+    max-width: 900px;
+    margin:0 auto 36px;
+    line-height: 28px;
+
     font-family: 'Metropolis',sans-serif;
     font-size:18px ;
     font-weight: 300;
     color: #fff;
     text-transform: uppercase;
-    max-width: 900px;
-    margin:0 auto 36px;
-    line-height: 28px;
 }
 .subscribe form input{
     display: inline-block;
@@ -302,16 +611,17 @@ header{
     line-height: 50px;
     border: 0;
     background: #e50202;
+    margin-left: 15px;
+    border-radius: 3px;
 
     font-family: 'Metropolis',sans-serif;
     font-size:20px ;
     font-weight: 500;
     color: #fff;
     text-transform: uppercase;
-    margin-left: 15px;
-    transition: 0.3s;
+
     cursor: pointer;
-    border-radius: 3px;
+    transition: 0.3s;
 }
 .subscribe form button:hover{
     background: #FA8104;
@@ -324,26 +634,24 @@ footer{
     background: #252525;
     border-bottom: solid 1px #464647;
 }
-.footer__inner{
+footer .inner{
     float: left;
 }
-.footer__inner .social{
-    float: none;
+footer .logo{
+    display:block;
 }
-.footer__inner a{
-    display:inline-block;
-    margin-bottom: 40px;
-}
-.footer__inner .social a{
-    margin-bottom: 0;
-    color: #252525;
+footer .inner .social{
+    margin: 40px 23px 0 0;
+    line-height: 42px;
+    width: 42px;
+    font-size: 30px;
 }
 footer ul{
     float: right;
     margin-left: 85px;
 }
 footer ul li{
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 footer ul li a{
     font-family: 'Metropolis',sans-serif;

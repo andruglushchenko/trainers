@@ -14,78 +14,217 @@
     <div class="intro">
         <img src="images/header_bg.jpg" alt="our trainers">
         <h1>OUR TRAINERS</h1><!-- position absolute-intro-->
+
         <!--header-->
         <header><!-- position absolute-intro-->
+            <div class="container container_border">
+                <a href="#" class="logo"><img src="images/Logo.png" alt="logo"></a>
+                <a href="#" class="link link_red">SIGN UP NOW</a>
+                <a href="#" class="link link_light">LOG IN</a>
+                <a href="#" class="link link_dark">ONLINE STORE</a>
+                <form action="#" method="post">
+                    <input type="text" name="search" placeholder="SEARCH">
+                    <button type="submit"></button>
+                </form>
+            </div><!--container border-->
+
             <div class="container">
-                <div class="header__up"><!--header__up-->
-                     <a href=""><img src="images/Logo.png" alt="logo"></a>
-                     <div class="btn__group">
-                         <form action="#" method="post">
-                             <input type="text" name="search" placeholder="SEARCH">
-                             <button type="submit"><i class="fas fa-search"></i></button>
-                         </form>
-                         <a href="#">ONLINE STORE</a>
-                         <a href="#">LOG IN</a>
-                         <a href="#">SIGN UP NOW</a>
-                     </div>
-                </div><!--header__up-->
-    <!--            **************-->
-
-                <div class="header__down"><!--header__down-->
-                    <nav>
-                        <ul>
-                            <li><a href="#">WORKOUTS</a></li>
-                            <li><a href="#">NUTRITION</a></li>
-                            <li><a href="#">  OUR TRAINERS</a></li>
-                            <li><a href="#"> COMPETITION PREP  </a></li>
-                            <li><a href="#">TRAINING PROGRAMS</a></li>
-                            <li><a href="#">SUCCESS STORIES</a></li>
-                            <li><a href="#">E-BOOKS</a></li>
-                        </ul>
-                    </nav>
-                    <div class="social">
-                        <a href="#" target="_blank" title="facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank" title="instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank" title="twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank" title="you tube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div><!--header__down-->
-    <!--           **************-->
-
+                <nav>
+                    <ul>
+                        <li><a href="#">WORKOUTS</a></li>
+                        <li><a href="#">NUTRITION</a></li>
+                        <li><a href="#">  OUR TRAINERS</a></li>
+                        <li><a href="#"> COMPETITION PREP  </a></li>
+                        <li><a href="#">TRAINING PROGRAMS</a></li>
+                        <li><a href="#">SUCCESS STORIES</a></li>
+                        <li><a href="#">E-BOOKS</a></li>
+                    </ul>
+                </nav>
+                <a href="#" target="_blank" title="you tube" class="social social_youtube"></a>
+                <a href="#" target="_blank" title="twitter" class="social social_twitter"></a>
+                <a href="#" target="_blank" title="instagram" class="social social_instagram"></a>
+                <a href="#" target="_blank" title="facebook" class="social social_facebook"></a>
             </div><!--container-->
         </header><!--header-->
-
     </div><!--intro-->
 <!--===============================================-->
 
-<section>
+<section class="workouts"><!--position: relative-->
+    <img src="images/workouts_bg.jpg" alt="img">
+    <h2>WORKOUTS</h2><!--position: absolute-->
 
-</section>
+    <div class="container container_for_workouts">
+        <!--sidebar-->
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#" class="all">ALL</a></li>
+                    <li><a href="#" class="Abs">Abs and Core</a></li>
+                    <li><a href="#" class="Arm">Arm Exercises</a></li>
+                    <li><a href="#" class="Back">Back Exercises</a></li>
+                    <li><a href="#" class="Chest">Chest Exercises</a></li>
+                    <li><a href="#" class="Leg">Leg Exercises</a></li>
+                    <li><a href="#" class="Shoulder">Shoulder Exercises</a></li>
+                    <li><a href="#" class="Videos">Exercise Videos</a></li>
+                </ul>
+            </nav>
+            <form action="#" method="post">
+                <button type="submit"></button>
+                <input type="text" name="search" placeholder="SEARCH">
+            </form>
+        </div><!--sidebar-->
+
+        <!--content-->
+        <div class="content">
+
+                <!--header for content-->
+            <div class="container container_border">
+                <h3>ALL WORKOUTS</h3>
+                <form action="#" name="select">
+                    <select name='EQUIPMENT'>
+                        <option>EQUIPMENT</option>
+                    </select>
+                    <select name='EXERCISE'>
+                        <option>EXERCISE TYPE</option>
+                    </select>
+                    <select name='LEVEL'>
+                        <option>SKILL LEVEL</option>
+                    </select>
+                </form>
+            </div><!--container container_border-->
+<!--****************************************-->
+
+                <!-- video-->
+            <video src="#" poster="images/video.jpg"></video>
+<!--*****************************************-->
+
+                <!--  photo of our trainers-->
+            <div class="container">
+                <div class="content__item">
+                    <a href='#'>
+                        <img src="images/content_photo_1.png"alt="photo">
+                    </a>
+                    <div class="container container_border">
+                        <h4>WORKOUT NAME</h4>
+
+                        <!-- Rounded switch -->
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div><!--container container_border-->
+                </div><!--content__item-->
+
+                <div class="content__item">
+                    <a href='#'>
+                        <img src="images/content_photo_2.png"alt="photo">
+                    </a>
+                    <div class="container container_border">
+                        <h4>WORKOUT NAME</h4>
+
+                        <!-- Rounded switch -->
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div><!--container container_border-->
+                </div><!--content__item-->
+            </div><!--container-->
+
+            <div class="container">
+                <div class="content__item">
+                    <a href='#'>
+                        <img src="images/content_photo_3.png"alt="photo">
+                    </a>
+                    <div class="container container_border">
+                        <h4>WORKOUT NAME</h4>
+
+                        <!-- Rounded switch -->
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div><!--container container_border-->
+                </div><!--content__item-->
+
+                <div class="content__item">
+                    <a href='#'>
+                        <img src="images/content_photo_1.png"alt="photo">
+                    </a>
+                    <div class="container container_border">
+                        <h4>WORKOUT NAME</h4>
+
+                        <!-- Rounded switch -->
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div><!--container container_border-->
+                </div><!--content__item-->
+            </div><!--container-->
+
+            <div class="container">
+                <div class="content__item">
+                    <a href='#'>
+                        <img src="images/content_photo_2.png"alt="photo">
+                    </a>
+                    <div class="container container_border">
+                        <h4>WORKOUT NAME</h4>
+
+                        <!-- Rounded switch -->
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div><!--content__item-->
+
+                <div class="content__item">
+                    <a href='#'>
+                        <img src="images/content_photo_3.png"alt="photo">
+                    </a>
+                    <div class="container container_border">
+                        <h4>WORKOUT NAME</h4>
+
+                        <!-- Rounded switch -->
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div><!--container-->
+
+
+        </div><!--content-->
+    </div><!--container container_for_workout-->
+</section><!--workouts-->
 <!--===================================================-->
-
 
 <!--subscribe-->
 <section class="subscribe">
-    <p>Get the latest promos, tips, and news direct from Stan McQuay & Team Physique Inc.
-        by subscribing to our weekly newsletter.</p>
-    <form action="#" method="post">
-        <input type="text" name="email" placeholder="ENTER EMAIL ADDRESS">
-        <button type="submit">SUBSCRIBE NOW </button>
-    </form>
+    <div class="container">
+        <p>Get the latest promos, tips, and news direct from Stan McQuay & Team Physique Inc.
+            by subscribing to our weekly newsletter.
+        </p>
+        <form action="#" method="post">
+            <input type="text" name="email" placeholder="ENTER EMAIL ADDRESS">
+            <button type="submit">SUBSCRIBE NOW </button>
+        </form>
+    </div><!--container-->
 </section><!--subscribe-->
 <!--====================================================-->
 
+<!--footer-->
 <footer>
     <div class="container">
-        <div class="footer__inner">
-            <a href="#"><img src="images/Logo_footer.png" alt="logo"></a>
-            <div class="social">
-                <a href="#" target="_blank" title="facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" target="_blank" title="instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" target="_blank" title="twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blank" title="you tube"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
+        <div class="inner">
+            <a href="#" class="logo"><img src="images/Logo_footer.png" alt="logo"></a>
+            <a href="#" target="_blank" title="facebook" class="social social_facebook"></a>
+            <a href="#" target="_blank" title="instagram" class="social social_instagram"></a>
+            <a href="#" target="_blank" title="twitter" class="social social_twitter"></a>
+            <a href="#" target="_blank" title="you tube" class="social social_youtube"></a>
+        </div><!--inner-->
             <ul>
                 <li><a href="#">TERMS & CONDITIONS</a></li>
                 <li><a href="#">PRIVACY POLICY</a></li>
