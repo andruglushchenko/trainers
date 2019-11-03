@@ -36,6 +36,7 @@ body{
     padding: 0;
     background:#fff;
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -64,6 +65,9 @@ a{
 .container_for_workouts{
     max-width: 1220px;
 }
+.content .container{
+    margin: 0;
+}
 
 h1{ /*position: absolute intro*/
     position: absolute;
@@ -85,27 +89,7 @@ h1:after{
     height: 3px;
     background:#e50202;
 }
-h2{ /*position: absolute workouts*/
-    position: absolute;
-    font-family: 'Bebas Neue',sans-serif;
-    font-size:50px;
-    font-weight:400 ;
-    color:#fff;
-    text-transform: uppercase;
-
-    top:245px;
-    width: 100%;
-    text-align: center;
-}
-h2:after{
-    display: block;
-    content: '';
-    max-width: 1170px;
-    margin:33px auto 0 ;
-    height: 3px;
-    background:#e50202;
-}
-h3{
+h2{
     font-family: 'Bebas Neue',sans-serif;
     font-size:50px;
     font-weight:400 ;
@@ -113,7 +97,7 @@ h3{
     text-transform: uppercase;
     float: left;
 }
-h3:before{
+h2:before{
     content:url("../images/workouts_icon_9.png") ;
     margin-right: 25px;
 }
@@ -129,7 +113,7 @@ h4{
 h4:before{
     display: inline-block;
     content:'\f005';
-    font-family: "Font Awesome\ 5 Brands", "Font Awesome\ 5 Free";
+    font-family: "Font Awesome\ 5 Brands", "Font Awesome\ 5 Free",sans-serif;
     font-weight: 300;
     color: #3c3c3c;
     margin-right: 15px;
@@ -161,6 +145,10 @@ header{ /*position: absolute intro*/
 header .logo{
     display: inline-block;
     float: left;
+    max-width: 351px;
+}
+header .logo img{
+    width: 100%;
 }
 /*form*/
 header form{
@@ -197,7 +185,7 @@ header form button{
 header form button:before{
     display: inline-block;
     content: '\f002';
-    font-family: "Font Awesome\ 5 Brands", "Font Awesome\ 5 Free";
+    font-family: "Font Awesome\ 5 Brands", "Font Awesome\ 5 Free",sans-serif;
     font-weight: 900;
     font-size: 20px;
     color: red;
@@ -236,7 +224,7 @@ header .link{
 header .link:before{
     display: inline-block;
     margin-right: 10px;
-    font-family: "Font Awesome\ 5 Brands","Font Awesome\ 5 Free";
+    font-family: "Font Awesome\ 5 Brands","Font Awesome\ 5 Free",sans-serif;
     font-weight: 900;
 }
 .link_dark:before{
@@ -258,6 +246,9 @@ header .link:hover{
 header nav{
     float: left;
     margin-top: 20px;
+}
+header nav ul{
+    position: relative;
 }
 header nav ul li{
     display: inline-block;
@@ -282,7 +273,7 @@ header nav ul li a{
 /**********************/
 
 /*social*/
-.social{
+header ul li .social{
     float: right;
     margin-top: 17px;
     margin-left: 15px;
@@ -292,7 +283,7 @@ header nav ul li a{
     background:#fa090a;
     text-align: center;
 
-    font-family: "Font Awesome\ 5 Brands","Font Awesome\ 5 Free";
+    font-family: "Font Awesome\ 5 Brands","Font Awesome\ 5 Free",sans-serif;
     font-weight: 900;
     font-size: 25px;
     color:#000;
@@ -300,7 +291,7 @@ header nav ul li a{
     cursor: pointer;
     transition: 0.3s;
 }
-.social:hover{
+header ul li .social:hover{
     background: #FA8104;
 }
 .social_facebook:before{
@@ -323,16 +314,13 @@ header nav ul li a{
     background: gray;
     position: relative; /*position: relative*/
 }
-.workouts img{
-    display: block;
-    width: 100%;
-}
 /*sidebar*/
 .sidebar{
     width: 20%;
     float: left;
     background: #000;
-    padding-bottom: 1342px;
+    padding-bottom: 1396px;
+
 }
 .sidebar nav ul{
     padding: 25px 0  0 27px;
@@ -424,7 +412,7 @@ header nav ul li a{
 .sidebar form button:before{
     display: inline-block;
     content: '\f002';
-    font-family: "Font Awesome\ 5 Brands", "Font Awesome\ 5 Free";
+    font-family: "Font Awesome\ 5 Brands", "Font Awesome\ 5 Free",sans-serif;
     font-weight: 900;
     font-size: 20px;
     color:#c3c3c3 ;
@@ -445,7 +433,6 @@ header nav ul li a{
 }
 .content form select{
     display: inline-block;
-    float: right;
     min-width: 170px;
     margin-left: 18px;
     margin-top: 10px;
@@ -479,7 +466,7 @@ header nav ul li a{
     float: right;
 }
 
-content__item:after{
+.content__item:after{
     display: inline-block;
     content: '';
     clear: both;
@@ -487,9 +474,11 @@ content__item:after{
 .content__item a{
     display: inline-block;
     background: red;
+    width: 100%;
     margin-bottom: 25px;
 }
 .content__item a img{
+    width: 100%;
     transition: 0.3s;
 }
 .content__item:hover a img{
@@ -594,7 +583,6 @@ input:checked + .slider:before {
     width: 100%;
     border: 0;
     padding-left: 25px;
-    margin-right: 15px;
     border-radius: 3px;
 }
 .subscribe form input::-webkit-input-placeholder {
@@ -611,7 +599,7 @@ input:checked + .slider:before {
     line-height: 50px;
     border: 0;
     background: #e50202;
-    margin-left: 15px;
+    margin-left: 30px;
     border-radius: 3px;
 
     font-family: 'Metropolis',sans-serif;
@@ -641,10 +629,24 @@ footer .logo{
     display:block;
 }
 footer .inner .social{
+    float: right;
+    display: inline-block;
+    background:#fa090a;
+    text-align: center;
+
+    font-family: "Font Awesome\ 5 Brands","Font Awesome\ 5 Free",sans-serif;
+    font-weight: 900;
+    color:#000;
+
+    cursor: pointer;
+    transition: 0.3s;
     margin: 40px 23px 0 0;
     line-height: 42px;
     width: 42px;
     font-size: 30px;
+}
+footer .inner .social:hover{
+    background: #FA8104;
 }
 footer ul{
     float: right;
@@ -671,3 +673,5 @@ footer ul li a:hover{
     padding: 50px 0;
     background: #010006;
 }
+
+

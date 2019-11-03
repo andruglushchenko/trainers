@@ -7,13 +7,10 @@
     <title>Document</title>
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
 </head>
 <body>
 
-    <!--intro-->
-    <div class="intro">
-        <img src="images/header_bg.jpg" alt="our trainers">
-        <h1>OUR TRAINERS</h1><!-- position absolute-intro-->
 
         <!--header-->
         <header><!-- position absolute-intro-->
@@ -40,19 +37,23 @@
                         <li><a href="#">E-BOOKS</a></li>
                     </ul>
                 </nav>
-                <a href="#" target="_blank" title="you tube" class="social social_youtube"></a>
-                <a href="#" target="_blank" title="twitter" class="social social_twitter"></a>
-                <a href="#" target="_blank" title="instagram" class="social social_instagram"></a>
-                <a href="#" target="_blank" title="facebook" class="social social_facebook"></a>
+                <ul class="social_group">
+                    <li><a href="#" target="_blank" title="you tube" class="social social_youtube"></a>
+                    <li><a href="#" target="_blank" title="twitter" class="social social_twitter"></a>
+                    <li><a href="#" target="_blank" title="instagram" class="social social_instagram"></a>
+                    <li> <a href="#" target="_blank" title="facebook" class="social social_facebook"></a>
+                </ul>
             </div><!--container-->
         </header><!--header-->
-    </div><!--intro-->
+
+        <!--intro-->
+        <div class="intro">
+            <img src="images/header_bg.jpg" alt="our trainers">
+            <h1>OUR TRAINERS</h1><!-- position absolute-intro-->
+        </div><!--intro-->
 <!--===============================================-->
 
 <section class="workouts"><!--position: relative-->
-    <img src="images/workouts_bg.jpg" alt="img">
-    <h2>WORKOUTS</h2><!--position: absolute-->
-
     <div class="container container_for_workouts">
         <!--sidebar-->
         <div class="sidebar">
@@ -79,7 +80,7 @@
 
                 <!--header for content-->
             <div class="container container_border">
-                <h3>ALL WORKOUTS</h3>
+                <h2>ALL WORKOUTS</h2>
                 <form action="#" name="select">
                     <select name='EQUIPMENT'>
                         <option>EQUIPMENT</option>
@@ -93,9 +94,10 @@
                 </form>
             </div><!--container container_border-->
 <!--****************************************-->
-
+            <div class="container">
                 <!-- video-->
-            <video src="#" poster="images/video.jpg"></video>
+                <video src="#" poster="images/video.jpg"></video>
+            </div>
 <!--*****************************************-->
 
                 <!--  photo of our trainers-->
